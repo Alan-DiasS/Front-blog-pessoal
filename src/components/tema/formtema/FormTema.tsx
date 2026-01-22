@@ -23,7 +23,6 @@ function FormTema() {
             await buscar(`/temas/${id}`, setTema, {
                 headers: { Authorization: token }
             })
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             if (error.toString().includes('403')) {
                 handleLogout()
@@ -65,7 +64,6 @@ function FormTema() {
                     headers: { 'Authorization': token }
                 })
                 alert('O Tema foi atualizado com sucesso!')
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             } catch (error: any) {
                 if (error.toString().includes('401')) {
                     handleLogout();
@@ -80,7 +78,6 @@ function FormTema() {
                     headers: { 'Authorization': token }
                 })
                 alert('O Tema foi cadastrado com sucesso!')
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             } catch (error: any) {
                 if (error.toString().includes('401')) {
                     handleLogout();

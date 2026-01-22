@@ -22,7 +22,6 @@ function Cadastro() {
   
   useEffect(() => {
     if (usuario.id !== 0){
-      // eslint-disable-next-line react-hooks/immutability
       retornar()
     }
   }, [usuario])
@@ -53,7 +52,6 @@ function Cadastro() {
       try{
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario)
         alert('Usuário cadastrado com sucesso!')
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       }catch(error){
         alert('Erro ao cadastrar o usuário!')
       }
